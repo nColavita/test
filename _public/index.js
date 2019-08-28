@@ -11,20 +11,26 @@ const renderChart = (data) => {
           type: 'bar'
         },
         size: {
-            height: 800
+            height: 850
         },
         axis: {
             x: {
-                label: 'Word'
+                label: 'Word',
+                type: 'category'
             },
             y: {
                 label: '# of Occurances'
             }
-        }        
+        },
+        grid: {
+            y: {
+                show: true
+            }
+        }            
     });
     d3.select("svg").append("text")
         .attr("x", "50%" )
-        .attr("y", 25)
+        .attr("y", 15)
         .attr("class", "chart-title")
         .style("text-anchor", "middle")
         .text("Unique Words: Justin Beiber Twitter Feed");
@@ -55,7 +61,6 @@ const parseData = (data) => {
             })
         }
     });
-    console.log(data_set);
     renderChart(JSON.stringify(data_set));
 }
 
