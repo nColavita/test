@@ -1,0 +1,70 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	position: relative;
+	background: white;
+	font-size: 16px;
+}
+/* Nav */
+dl {
+	background: black;
+}
+.navigationlist {
+	text-align: center;
+}
+dl .nav_item {
+	display: inline-block;
+	margin: 1em;
+	padding: 10px;
+}
+dl .nav_item:hover {
+	color: blue;
+	font-weight: bold;	
+}
+
+.header {
+	text-align: center;
+	margin: 0 auto;
+}
+.sectionheader {
+	font-size: 1.25em;
+}
+.navigationlist a {
+	color: #fff;
+}
+.sectionheader ~ * {
+	width: 49%;
+    display: inline-block;
+}
+.text {
+	float: right;
+    margin: 0 15% 0 3%;
+}
+#bottomalign {
+	bottom:0;
+	position: absolute;
+	margin-bottom: 10px;
+	text-align: center;
+}
+div > #image {
+	margin: 0 0 0 calc(50% - 200px);
+}
+#footer {
+	background: rgba(0,0,0,0.5); 
+	padding: 20px; 
+	width: 100vw; 
+	display: block; 
+	color: #fff;
+}
+#footer span{
+	margin-bottom:10px;	
+}
+#image:nth-child(1){
+	border-radius: 1000px;
+}
+#image:nth-child(2){
+	vertical-align: top;
+}
+.chart-title{
+	font-size: 1.2em;
+	font-weight: 800;
+}
