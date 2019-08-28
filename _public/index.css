@@ -6,7 +6,7 @@ body {
 }
 /* Nav */
 dl {
-	background: black;
+	background: rgb(30, 30, 30);
 }
 .navigationlist {
 	text-align: center;
@@ -48,6 +48,13 @@ dl .nav_item:hover {
 div > #image {
 	margin: 0 0 0 calc(50% - 200px);
 }
+#image:nth-child(1){
+	border-radius: 1000px;
+}
+#image:nth-child(2){
+	vertical-align: top;
+}
+/* Footer */
 #footer {
 	background: rgba(0,0,0,0.5); 
 	padding: 20px; 
@@ -58,12 +65,8 @@ div > #image {
 #footer span{
 	margin-bottom:10px;	
 }
-#image:nth-child(1){
-	border-radius: 1000px;
-}
-#image:nth-child(2){
-	vertical-align: top;
-}
+
+/* C3 */
 .chart-title{
 	font-size: 1.2em;
 	font-weight: 800;

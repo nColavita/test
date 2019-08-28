@@ -1,6 +1,5 @@
 // New Data Set
 let data_set = {};
-let a;
 
 // Render Chart
 const renderChart = (data) => {
@@ -14,10 +13,6 @@ const renderChart = (data) => {
         size: {
             height: 800
         },
-        bar: {
-            space: 0.25,
-            width: { ratio: 0.5 }        
-        },
         axis: {
             x: {
                 label: 'Word'
@@ -27,11 +22,10 @@ const renderChart = (data) => {
             }
         }        
     });
-    
     d3.select("svg").append("text")
-        .attr("x", 500 )
-        .attr("y", 50)
-        .class("chart-title")
+        .attr("x", "50%" )
+        .attr("y", 25)
+        .attr("class", "chart-title")
         .style("text-anchor", "middle")
         .text("Unique Words: Justin Beiber Twitter Feed");
 }
@@ -43,11 +37,10 @@ const parseData = (data) => {
     content.forEach(d => {
         if(d.content.bodyHtml){
             let bodyHTML = d.content.bodyHtml.split(/\s+/);
-            let count = 0;
             // Loop through each bodyHTML array
             bodyHTML.forEach(d => {
                 d = d.toLowerCase();
-                // Filter unnecessary elements in bodyHTML string - messy needs to be rewritten
+                // Filter unnecessary elements in bodyHTML strings - messy needs to be rewritten
                 if( 
                     d.includes("<a") ||  d.includes("resource") || d.includes("data") || d.includes("href") || d.includes("<span") || d.includes("<a") || d.includes("property") || d.includes("target") || d.includes("vocab") || d.includes("class") || d.includes("rel") || d.includes("typeof") || d.includes("hashtag")
                 ){
@@ -65,6 +58,7 @@ const parseData = (data) => {
     console.log(data_set);
     renderChart(JSON.stringify(data_set));
 }
+
 window.onload = function(){
     console.log("window loaded");
     // AJAX request to read local JSON file
